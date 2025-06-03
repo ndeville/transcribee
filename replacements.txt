@@ -1,0 +1,61 @@
+nick, note|Nic Note
+nicknote|Nic Note
+nick note|Nic Note
+nick, note|Nic Note
+you line|\n
+new line|\n
+you line|\n
+new line|\n
+your line|\n
+dash|-
+full stop|.
+four step|.
+full step|.
+full-step|.
+full-stop|.
+for stop|.
+4 stop|.
+forstub|.
+for step|.
+fullstop|.
+fostop|.
+false stop|.
+false top|.
+fold step|.
+forstup|.
+come up|,
+call in|:
+colin|:
+colon|:
+comma|,
+coma|,
+commons|comments
+ c | see 
+We were|Reword
+Salves|Sales
+cells|Sales
+Node|Note
+ .|.
+ ,|,
+ ?|?
+ ,|,
+question mark|?
+come out|,
+comer|,
+opposed up|.
+full-stop|.
+on 24|ON24
+second|2nd
+comma|,
+thoughtslash|/
+ forward slash |/
+ false-lash|/
+we were|reword
+smiley face|😁
+open quote|"
+close quote|"
+close parenthesis|)
+open parenthesis|(
+close quote|"
+# every input lower case
+# always leave an empty line at the end

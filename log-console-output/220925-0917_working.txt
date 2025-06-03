@@ -1,0 +1,793 @@
+source /Users/nic/Python/recordee/venv/bin/activate
+nic@NicolasacStudio recordee % /Users/nic/Python/recordee/venv/bin/python /Users/nic/Python/recorde
+e/main.py
+----------
+09:16:04 starting main.py
+
+main.py boilerplate loaded -----------
+
+Already transcribed UIDs:
+[]
+
+
+==================================================
+==================================================
+==================================================
+
+recording #1 Processing 01-27-19.m4a from JustPressRecord
+
+filename='01-27-19.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-05-26/01-27-19.m4a'
+parent_folder='2022-05-26'
+uid='20220526-012719'
+/Users/nic/Python/recordee/venv/lib/python3.10/site-packages/whisper/transcribe.py:70: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+Detected language: english
+
+#65 transcript["text"] =  People get violent when who they are is contrasting with who they think they should be. All opposed up.
+
+
+#131 Transcript to clean:
+' People get violent when who they are is contrasting with who they think they should be. All opposed up.'
+
+
+#135 Creating dict of replacements:
+
+#145 line_parts=['nick, note', 'Nic Note\n']
+#145 line_parts=['nicknote', 'Nic Note\n']
+#145 line_parts=['nick note', 'Nic Note\n']
+#145 line_parts=['nick, note', 'Nic Note\n']
+#145 line_parts=['You line', '\\n\n']
+#145 line_parts=['new line', '\\n\n']
+#145 line_parts=['you line', '\\n\n']
+#145 line_parts=['new line', '\\n\n']
+#145 line_parts=['Dash', '-\n']
+#145 line_parts=['dash', '-\n']
+#145 line_parts=['full stop', '.\n']
+#145 line_parts=['Full stop', '.\n']
+#145 line_parts=['four step', '.\n']
+#145 line_parts=['full step', '.\n']
+#145 line_parts=['Full-step', '.\n']
+#145 line_parts=['full-step', '.\n']
+#145 line_parts=['come up', ',\n']
+#145 line_parts=['Call in', ':\n']
+#145 line_parts=['commons', 'comments\n']
+#145 line_parts=[' c ', ' see \n']
+#145 line_parts=['We were', 'Reword\n']
+#145 line_parts=['Salves', 'Sales\n']
+#145 line_parts=['Node', 'Note\n']
+#145 line_parts=[' .', '.\n']
+#145 line_parts=[' ,', ',\n']
+#145 line_parts=[' ?', '?\n']
+#145 line_parts=['question mark', '?\n']
+
+#159 Processing list of replacements:
+
+#162 replacing 'nick, note' with 'Nic Note'
+#162 replacing 'nicknote' with 'Nic Note'
+#162 replacing 'nick note' with 'Nic Note'
+#162 replacing 'You line' with '\\n'
+#162 replacing 'new line' with '\\n'
+#162 replacing 'you line' with '\\n'
+#162 replacing 'Dash' with '-'
+#162 replacing 'dash' with '-'
+#162 replacing 'full stop' with '.'
+#162 replacing 'Full stop' with '.'
+#162 replacing 'four step' with '.'
+#162 replacing 'full step' with '.'
+#162 replacing 'Full-step' with '.'
+#162 replacing 'full-step' with '.'
+#162 replacing 'come up' with ','
+#162 replacing 'Call in' with ':'
+#162 replacing 'commons' with 'comments'
+#162 replacing ' c ' with ' see '
+#162 replacing 'We were' with 'Reword'
+#162 replacing 'Salves' with 'Sales'
+#162 replacing 'Node' with 'Note'
+#162 replacing ' .' with '.'
+#162 replacing ' ,' with ','
+#162 replacing ' ?' with '?'
+#162 replacing 'question mark' with '?'
+
+#169 Processing by lines:
+
+
+---
+Processing ' people get violent when who they are is contrasting with who they think they should be all opposed up'
+people get violent when who they are is contrasting with who they think they should be all opposed up
+string_output='People get violent when who they are is contrasting with who they think they should be all opposed up'
+
+Transcript cleaned:
+People get violent when who they are is contrasting with who they think they should be all opposed up
+
+Adding 20220526-012719 to log.
+
+==================================================
+==================================================
+==================================================
+
+recording #2 iCloud file: .13-25-33.m4a.icloud from JustPressRecord / SKIPPING
+
+
+==================================================
+==================================================
+==================================================
+
+recording #3 Processing 00-37-19.m4a from JustPressRecord
+
+filename='00-37-19.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-05-17/00-37-19.m4a'
+parent_folder='2022-05-17'
+uid='20220517-003719'
+/Users/nic/Python/recordee/venv/lib/python3.10/site-packages/whisper/transcribe.py:70: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+Detected language: english
+
+#65 transcript["text"] =  Happy 4X10 continued, full stop, New Line. Calculate date, when half of our lives will have been spent together full stop, New Line. I'm happy to have spent the last phases of your life with you and grateful for where we are at today. I'm very much looking forward to enjoying the next phases of our lives together full stop, New Line. Unrelated to your birthday, come out. Note that I have subscribed to you to Glacier Dash, hopefully providing a bit of mental break. And small entertainment during the year ahead, full stop, New Line. Thank you for being my wife and the best mother to the best kids, possible full stop, New Line. Self reflection is good and a round number like 4X10 can provide the trigger for a deeper one 4X10 reflection, full stop, New Line. I'm happy to have spent the last two phases of your life with you and grateful for where you are at today. I'm happy to have spent the last two phases of your life with you and grateful for where you are at today. I'm happy to have spent the last two phases of your life with you and grateful for where you are at today. I'm happy to have spent the last two phases of your life with you and grateful for where you are at today. I'm happy to have spent the last two phases of your life with you and grateful for where you are at today. I'm happy to have spent the last two phases of your life with you and grateful for where you are at today. The end for now, full stop, going to bed full stop. I'm happy to have spent the last two phases of your life with you and grateful for where you are at today.
+
+
+#131 Transcript to clean:
+" Happy 4X10 continued, full stop, New Line. Calculate date, when half of our lives will have been spent together full stop, New Line. I'm happy to have spent the last phases of your life with you and grateful for where we are at today. I'm very much looking forward to enjoying the next phases of our lives together full stop, New Line. Unrelated to your birthday, come out. Note that I have subscribed to you to Glacier Dash, hopefully providing a bit of mental break. And small entertainment during the year ahead, full stop, New Line. Thank you for being my wife and the best mother to the best kids, possible full stop, New Line. Self reflection is good and a round number like 4X10 can provide the trigger for a deeper one 4X10 reflection, full stop, New Line. I'm happy to have spent the last two phases of your life with you and grateful for where you are at today. I'm happy to have spent the last two phases of your life with you and grateful for where you are at today. I'm happy to have spent the last two phases of your life with you and grateful for where you are at today. I'm happy to have spent the last two phases of your life with you and grateful for where you are at today. I'm happy to have spent the last two phases of your life with you and grateful for where you are at today. I'm happy to have spent the last two phases of your life with you and grateful for where you are at today. The end for now, full stop, going to bed full stop. I'm happy to have spent the last two phases of your life with you and grateful for where you are at today."
+
+
+#135 Creating dict of replacements:
+
+#145 line_parts=['nick, note', 'Nic Note\n']
+#145 line_parts=['nicknote', 'Nic Note\n']
+#145 line_parts=['nick note', 'Nic Note\n']
+#145 line_parts=['nick, note', 'Nic Note\n']
+#145 line_parts=['You line', '\\n\n']
+#145 line_parts=['new line', '\\n\n']
+#145 line_parts=['you line', '\\n\n']
+#145 line_parts=['new line', '\\n\n']
+#145 line_parts=['Dash', '-\n']
+#145 line_parts=['dash', '-\n']
+#145 line_parts=['full stop', '.\n']
+#145 line_parts=['Full stop', '.\n']
+#145 line_parts=['four step', '.\n']
+#145 line_parts=['full step', '.\n']
+#145 line_parts=['Full-step', '.\n']
+#145 line_parts=['full-step', '.\n']
+#145 line_parts=['come up', ',\n']
+#145 line_parts=['Call in', ':\n']
+#145 line_parts=['commons', 'comments\n']
+#145 line_parts=[' c ', ' see \n']
+#145 line_parts=['We were', 'Reword\n']
+#145 line_parts=['Salves', 'Sales\n']
+#145 line_parts=['Node', 'Note\n']
+#145 line_parts=[' .', '.\n']
+#145 line_parts=[' ,', ',\n']
+#145 line_parts=[' ?', '?\n']
+#145 line_parts=['question mark', '?\n']
+
+#159 Processing list of replacements:
+
+#162 replacing 'nick, note' with 'Nic Note'
+#162 replacing 'nicknote' with 'Nic Note'
+#162 replacing 'nick note' with 'Nic Note'
+#162 replacing 'You line' with '\\n'
+#162 replacing 'new line' with '\\n'
+#162 replacing 'you line' with '\\n'
+#162 replacing 'Dash' with '-'
+#162 replacing 'dash' with '-'
+#162 replacing 'full stop' with '.'
+#162 replacing 'Full stop' with '.'
+#162 replacing 'four step' with '.'
+#162 replacing 'full step' with '.'
+#162 replacing 'Full-step' with '.'
+#162 replacing 'full-step' with '.'
+#162 replacing 'come up' with ','
+#162 replacing 'Call in' with ':'
+#162 replacing 'commons' with 'comments'
+#162 replacing ' c ' with ' see '
+#162 replacing 'We were' with 'Reword'
+#162 replacing 'Salves' with 'Sales'
+#162 replacing 'Node' with 'Note'
+#162 replacing ' .' with '.'
+#162 replacing ' ,' with ','
+#162 replacing ' ?' with '?'
+#162 replacing 'question mark' with '?'
+
+#169 Processing by lines:
+
+#175 part=' happy 4x10 continued. '
+
+---
+Processing ' happy 4x10 continued. '
+happy 4x10 continued. 
+string_output='Happy 4x10 continued. '
+---start verbose capitalise_sentence (deactivate with v=False)
+
+og_string='Happy 4x10 continued. '
+
+lower_s='happy 4x10 continued. '
+
+start_string final='Happy 4x10 continued. '
+
+returned repr(final)='Happy 4x10 continued. '
+
+---end verbose capitalise_sentence
+
+#175 part=' calculate date when half of our lives will have been spent together. '
+
+---
+Processing ' calculate date when half of our lives will have been spent together. '
+calculate date when half of our lives will have been spent together. 
+string_output='Calculate date when half of our lives will have been spent together. '
+---start verbose capitalise_sentence (deactivate with v=False)
+
+og_string='Calculate date when half of our lives will have been spent together. '
+
+lower_s='calculate date when half of our lives will have been spent together. '
+
+start_string final='Calculate date when half of our lives will have been spent together. '
+
+returned repr(final)='Calculate date when half of our lives will have been spent together. '
+
+---end verbose capitalise_sentence
+
+#175 part=" i'm happy to have spent the last phases of your life with you and grateful for where we are at today i'm very much looking forward to enjoying the next phases of our lives together. "
+
+---
+Processing " i'm happy to have spent the last phases of your life with you and grateful for where we are at today i'm very much looking forward to enjoying the next phases of our lives together. "
+i'm happy to have spent the last phases of your life with you and grateful for where we are at today i'm very much looking forward to enjoying the next phases of our lives together. 
+string_output="I'm happy to have spent the last phases of your life with you and grateful for where we are at today i'm very much looking forward to enjoying the next phases of our lives together. "
+---start verbose capitalise_sentence (deactivate with v=False)
+
+og_string="I'm happy to have spent the last phases of your life with you and grateful for where we are at today i'm very much looking forward to enjoying the next phases of our lives together. "
+
+lower_s="i'm happy to have spent the last phases of your life with you and grateful for where we are at today i'm very much looking forward to enjoying the next phases of our lives together. "
+
+start_string final="I'm happy to have spent the last phases of your life with you and grateful for where we are at today i'm very much looking forward to enjoying the next phases of our lives together. "
+
+' i'm ' final="I'm happy to have spent the last phases of your life with you and grateful for where we are at today I'm very much looking forward to enjoying the next phases of our lives together. "
+
+returned repr(final)="I'm happy to have spent the last phases of your life with you and grateful for where we are at today I'm very much looking forward to enjoying the next phases of our lives together. "
+
+---end verbose capitalise_sentence
+
+#175 part=' unrelated to your birthday come out note that i have subscribed to you to glacier - hopefully providing a bit of mental break and small entertainment during the year ahead. '
+
+---
+Processing ' unrelated to your birthday come out note that i have subscribed to you to glacier - hopefully providing a bit of mental break and small entertainment during the year ahead. '
+unrelated to your birthday come out note that i have subscribed to you to glacier - hopefully providing a bit of mental break and small entertainment during the year ahead. 
+string_output='Unrelated to your birthday come out note that i have subscribed to you to glacier - hopefully providing a bit of mental break and small entertainment during the year ahead. '
+---start verbose capitalise_sentence (deactivate with v=False)
+
+og_string='Unrelated to your birthday come out note that i have subscribed to you to glacier - hopefully providing a bit of mental break and small entertainment during the year ahead. '
+
+lower_s='unrelated to your birthday come out note that i have subscribed to you to glacier - hopefully providing a bit of mental break and small entertainment during the year ahead. '
+
+start_string final='Unrelated to your birthday come out note that i have subscribed to you to glacier - hopefully providing a bit of mental break and small entertainment during the year ahead. '
+
+' i ' final='Unrelated to your birthday come out note that I have subscribed to you to glacier - hopefully providing a bit of mental break and small entertainment during the year ahead. '
+
+returned repr(final)='Unrelated to your birthday come out note that I have subscribed to you to glacier - hopefully providing a bit of mental break and small entertainment during the year ahead. '
+
+---end verbose capitalise_sentence
+
+#175 part=' thank you for being my wife and the best mother to the best kids possible. '
+
+---
+Processing ' thank you for being my wife and the best mother to the best kids possible. '
+thank you for being my wife and the best mother to the best kids possible. 
+string_output='Thank you for being my wife and the best mother to the best kids possible. '
+---start verbose capitalise_sentence (deactivate with v=False)
+
+og_string='Thank you for being my wife and the best mother to the best kids possible. '
+
+lower_s='thank you for being my wife and the best mother to the best kids possible. '
+
+start_string final='Thank you for being my wife and the best mother to the best kids possible. '
+
+returned repr(final)='Thank you for being my wife and the best mother to the best kids possible. '
+
+---end verbose capitalise_sentence
+
+#175 part=' self reflection is good and a round number like 4x10 can provide the trigger for a deeper one 4x10 reflection. '
+
+---
+Processing ' self reflection is good and a round number like 4x10 can provide the trigger for a deeper one 4x10 reflection. '
+self reflection is good and a round number like 4x10 can provide the trigger for a deeper one 4x10 reflection. 
+string_output='Self reflection is good and a round number like 4x10 can provide the trigger for a deeper one 4x10 reflection. '
+---start verbose capitalise_sentence (deactivate with v=False)
+
+og_string='Self reflection is good and a round number like 4x10 can provide the trigger for a deeper one 4x10 reflection. '
+
+lower_s='self reflection is good and a round number like 4x10 can provide the trigger for a deeper one 4x10 reflection. '
+
+start_string final='Self reflection is good and a round number like 4x10 can provide the trigger for a deeper one 4x10 reflection. '
+
+returned repr(final)='Self reflection is good and a round number like 4x10 can provide the trigger for a deeper one 4x10 reflection. '
+
+---end verbose capitalise_sentence
+
+#175 part=" i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today the end for now. going to bed. i'm happy to have spent the last two phases of your life with you and grateful for where you are at today"
+
+---
+Processing " i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today the end for now. going to bed. i'm happy to have spent the last two phases of your life with you and grateful for where you are at today"
+i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today the end for now. going to bed. i'm happy to have spent the last two phases of your life with you and grateful for where you are at today
+string_output="I'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today the end for now. going to bed. i'm happy to have spent the last two phases of your life with you and grateful for where you are at today"
+---start verbose capitalise_sentence (deactivate with v=False)
+
+og_string="I'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today the end for now. going to bed. i'm happy to have spent the last two phases of your life with you and grateful for where you are at today"
+
+lower_s="i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today the end for now. going to bed. i'm happy to have spent the last two phases of your life with you and grateful for where you are at today"
+
+start_string final="I'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today i'm happy to have spent the last two phases of your life with you and grateful for where you are at today the end for now. Going to bed. I'm happy to have spent the last two phases of your life with you and grateful for where you are at today"
+
+' i'm ' final="I'm happy to have spent the last two phases of your life with you and grateful for where you are at today I'm happy to have spent the last two phases of your life with you and grateful for where you are at today I'm happy to have spent the last two phases of your life with you and grateful for where you are at today I'm happy to have spent the last two phases of your life with you and grateful for where you are at today I'm happy to have spent the last two phases of your life with you and grateful for where you are at today I'm happy to have spent the last two phases of your life with you and grateful for where you are at today the end for now. Going to bed. I'm happy to have spent the last two phases of your life with you and grateful for where you are at today"
+
+returned repr(final)="I'm happy to have spent the last two phases of your life with you and grateful for where you are at today I'm happy to have spent the last two phases of your life with you and grateful for where you are at today I'm happy to have spent the last two phases of your life with you and grateful for where you are at today I'm happy to have spent the last two phases of your life with you and grateful for where you are at today I'm happy to have spent the last two phases of your life with you and grateful for where you are at today I'm happy to have spent the last two phases of your life with you and grateful for where you are at today the end for now. Going to bed. I'm happy to have spent the last two phases of your life with you and grateful for where you are at today"
+
+---end verbose capitalise_sentence
+
+
+Transcript cleaned:
+Happy 4x10 continued.   
+Calculate date when half of our lives will have been spent together.   
+I'm happy to have spent the last phases of your life with you and grateful for where we are at today I'm very much looking forward to enjoying the next phases of our lives together.   
+Unrelated to your birthday come out note that I have subscribed to you to glacier - hopefully providing a bit of mental break and small entertainment during the year ahead.   
+Thank you for being my wife and the best mother to the best kids possible.   
+Self reflection is good and a round number like 4x10 can provide the trigger for a deeper one 4x10 reflection.   
+I'm happy to have spent the last two phases of your life with you and grateful for where you are at today I'm happy to have spent the last two phases of your life with you and grateful for where you are at today I'm happy to have spent the last two phases of your life with you and grateful for where you are at today I'm happy to have spent the last two phases of your life with you and grateful for where you are at today I'm happy to have spent the last two phases of your life with you and grateful for where you are at today I'm happy to have spent the last two phases of your life with you and grateful for where you are at today the end for now. Going to bed. I'm happy to have spent the last two phases of your life with you and grateful for where you are at today  
+
+Adding 20220517-003719 to log.
+
+==================================================
+==================================================
+==================================================
+
+recording #4 Processing 01-29-25.m4a from JustPressRecord
+
+filename='01-29-25.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-24/01-29-25.m4a'
+parent_folder='2022-09-24'
+uid='20220924-012925'
+/Users/nic/Python/recordee/venv/lib/python3.10/site-packages/whisper/transcribe.py:70: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+Detected language: english
+
+#65 transcript["text"] =  Nick, note, new line, recording, new line. Ultimate goal is a workflow as simple as one tap recording from phone or watch. And transcript is in my draft folder when I get back at my desk full stop.
+
+
+#131 Transcript to clean:
+' Nick, note, new line, recording, new line. Ultimate goal is a workflow as simple as one tap recording from phone or watch. And transcript is in my draft folder when I get back at my desk full stop.'
+
+
+#135 Creating dict of replacements:
+
+#145 line_parts=['nick, note', 'Nic Note\n']
+#145 line_parts=['nicknote', 'Nic Note\n']
+#145 line_parts=['nick note', 'Nic Note\n']
+#145 line_parts=['nick, note', 'Nic Note\n']
+#145 line_parts=['You line', '\\n\n']
+#145 line_parts=['new line', '\\n\n']
+#145 line_parts=['you line', '\\n\n']
+#145 line_parts=['new line', '\\n\n']
+#145 line_parts=['Dash', '-\n']
+#145 line_parts=['dash', '-\n']
+#145 line_parts=['full stop', '.\n']
+#145 line_parts=['Full stop', '.\n']
+#145 line_parts=['four step', '.\n']
+#145 line_parts=['full step', '.\n']
+#145 line_parts=['Full-step', '.\n']
+#145 line_parts=['full-step', '.\n']
+#145 line_parts=['come up', ',\n']
+#145 line_parts=['Call in', ':\n']
+#145 line_parts=['commons', 'comments\n']
+#145 line_parts=[' c ', ' see \n']
+#145 line_parts=['We were', 'Reword\n']
+#145 line_parts=['Salves', 'Sales\n']
+#145 line_parts=['Node', 'Note\n']
+#145 line_parts=[' .', '.\n']
+#145 line_parts=[' ,', ',\n']
+#145 line_parts=[' ?', '?\n']
+#145 line_parts=['question mark', '?\n']
+
+#159 Processing list of replacements:
+
+#162 replacing 'nick, note' with 'Nic Note'
+#162 replacing 'nicknote' with 'Nic Note'
+#162 replacing 'nick note' with 'Nic Note'
+#162 replacing 'You line' with '\\n'
+#162 replacing 'new line' with '\\n'
+#162 replacing 'you line' with '\\n'
+#162 replacing 'Dash' with '-'
+#162 replacing 'dash' with '-'
+#162 replacing 'full stop' with '.'
+#162 replacing 'Full stop' with '.'
+#162 replacing 'four step' with '.'
+#162 replacing 'full step' with '.'
+#162 replacing 'Full-step' with '.'
+#162 replacing 'full-step' with '.'
+#162 replacing 'come up' with ','
+#162 replacing 'Call in' with ':'
+#162 replacing 'commons' with 'comments'
+#162 replacing ' c ' with ' see '
+#162 replacing 'We were' with 'Reword'
+#162 replacing 'Salves' with 'Sales'
+#162 replacing 'Node' with 'Note'
+#162 replacing ' .' with '.'
+#162 replacing ' ,' with ','
+#162 replacing ' ?' with '?'
+#162 replacing 'question mark' with '?'
+
+#169 Processing by lines:
+
+#175 part=' Nic Note '
+
+---
+Processing ' Nic Note '
+Nic Note 
+string_output='Nic Note '
+---start verbose capitalise_sentence (deactivate with v=False)
+
+og_string='Nic Note '
+
+lower_s='nic note '
+
+start_string final='Nic note '
+
+returned repr(final)='Nic note '
+
+---end verbose capitalise_sentence
+
+#175 part=' recording '
+
+---
+Processing ' recording '
+recording 
+string_output='Recording '
+---start verbose capitalise_sentence (deactivate with v=False)
+
+og_string='Recording '
+
+lower_s='recording '
+
+start_string final='Recording '
+
+returned repr(final)='Recording '
+
+---end verbose capitalise_sentence
+
+#175 part=' ultimate goal is a workflow as simple as one tap recording from phone or watch and transcript is in my draft folder when i get back at my desk.'
+
+---
+Processing ' ultimate goal is a workflow as simple as one tap recording from phone or watch and transcript is in my draft folder when i get back at my desk.'
+ultimate goal is a workflow as simple as one tap recording from phone or watch and transcript is in my draft folder when i get back at my desk.
+string_output='Ultimate goal is a workflow as simple as one tap recording from phone or watch and transcript is in my draft folder when i get back at my desk.'
+---start verbose capitalise_sentence (deactivate with v=False)
+
+og_string='Ultimate goal is a workflow as simple as one tap recording from phone or watch and transcript is in my draft folder when i get back at my desk.'
+
+lower_s='ultimate goal is a workflow as simple as one tap recording from phone or watch and transcript is in my draft folder when i get back at my desk.'
+
+start_string final='Ultimate goal is a workflow as simple as one tap recording from phone or watch and transcript is in my draft folder when i get back at my desk.'
+
+' i ' final='Ultimate goal is a workflow as simple as one tap recording from phone or watch and transcript is in my draft folder when I get back at my desk.'
+
+returned repr(final)='Ultimate goal is a workflow as simple as one tap recording from phone or watch and transcript is in my draft folder when I get back at my desk.'
+
+---end verbose capitalise_sentence
+
+
+Transcript cleaned:
+Nic note   
+Recording   
+Ultimate goal is a workflow as simple as one tap recording from phone or watch and transcript is in my draft folder when I get back at my desk.  
+
+Adding 20220924-012925 to log.
+
+==================================================
+==================================================
+==================================================
+
+recording #5 Processing 20-44-23.m4a from JustPressRecord
+
+filename='20-44-23.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-06-14/20-44-23.m4a'
+parent_folder='2022-06-14'
+uid='20220614-204423'
+/Users/nic/Python/recordee/venv/lib/python3.10/site-packages/whisper/transcribe.py:70: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+Detected language: german
+
+#65 transcript["text"] =  Meineitarren Gr rupees recommend Tierletter 5. Uni, es will zwischendurch dispersieren. Na dann runter dann Tabelt schonresh dor
+
+
+#131 Transcript to clean:
+' Meineitarren Gr rupees recommend Tierletter 5. Uni, es will zwischendurch dispersieren. Na dann runter dann Tabelt schonresh dor'
+
+
+#135 Creating dict of replacements:
+
+#145 line_parts=['nick, note', 'Nic Note\n']
+#145 line_parts=['nicknote', 'Nic Note\n']
+#145 line_parts=['nick note', 'Nic Note\n']
+#145 line_parts=['nick, note', 'Nic Note\n']
+#145 line_parts=['You line', '\\n\n']
+#145 line_parts=['new line', '\\n\n']
+#145 line_parts=['you line', '\\n\n']
+#145 line_parts=['new line', '\\n\n']
+#145 line_parts=['Dash', '-\n']
+#145 line_parts=['dash', '-\n']
+#145 line_parts=['full stop', '.\n']
+#145 line_parts=['Full stop', '.\n']
+#145 line_parts=['four step', '.\n']
+#145 line_parts=['full step', '.\n']
+#145 line_parts=['Full-step', '.\n']
+#145 line_parts=['full-step', '.\n']
+#145 line_parts=['come up', ',\n']
+#145 line_parts=['Call in', ':\n']
+#145 line_parts=['commons', 'comments\n']
+#145 line_parts=[' c ', ' see \n']
+#145 line_parts=['We were', 'Reword\n']
+#145 line_parts=['Salves', 'Sales\n']
+#145 line_parts=['Node', 'Note\n']
+#145 line_parts=[' .', '.\n']
+#145 line_parts=[' ,', ',\n']
+#145 line_parts=[' ?', '?\n']
+#145 line_parts=['question mark', '?\n']
+
+#159 Processing list of replacements:
+
+#162 replacing 'nick, note' with 'Nic Note'
+#162 replacing 'nicknote' with 'Nic Note'
+#162 replacing 'nick note' with 'Nic Note'
+#162 replacing 'You line' with '\\n'
+#162 replacing 'new line' with '\\n'
+#162 replacing 'you line' with '\\n'
+#162 replacing 'Dash' with '-'
+#162 replacing 'dash' with '-'
+#162 replacing 'full stop' with '.'
+#162 replacing 'Full stop' with '.'
+#162 replacing 'four step' with '.'
+#162 replacing 'full step' with '.'
+#162 replacing 'Full-step' with '.'
+#162 replacing 'full-step' with '.'
+#162 replacing 'come up' with ','
+#162 replacing 'Call in' with ':'
+#162 replacing 'commons' with 'comments'
+#162 replacing ' c ' with ' see '
+#162 replacing 'We were' with 'Reword'
+#162 replacing 'Salves' with 'Sales'
+#162 replacing 'Node' with 'Note'
+#162 replacing ' .' with '.'
+#162 replacing ' ,' with ','
+#162 replacing ' ?' with '?'
+#162 replacing 'question mark' with '?'
+
+#169 Processing by lines:
+
+
+---
+Processing ' meineitarren gr rupees recommend tierletter 5 uni es will zwischendurch dispersieren na dann runter dann tabelt schonresh dor'
+meineitarren gr rupees recommend tierletter 5 uni es will zwischendurch dispersieren na dann runter dann tabelt schonresh dor
+string_output='Meineitarren gr rupees recommend tierletter 5 uni es will zwischendurch dispersieren na dann runter dann tabelt schonresh dor'
+
+Transcript cleaned:
+Meineitarren gr rupees recommend tierletter 5 uni es will zwischendurch dispersieren na dann runter dann tabelt schonresh dor
+
+Adding 20220614-204423 to log.
+
+==================================================
+==================================================
+==================================================
+
+recording #6 Processing 17-54-32.m4a from JustPressRecord
+
+filename='17-54-32.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-04-05/17-54-32.m4a'
+parent_folder='2022-04-05'
+uid='20220405-175432'
+
+==================================================
+==================================================
+==================================================
+
+recording #7 Processing 17-58-38.m4a from JustPressRecord
+
+filename='17-58-38.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-04-05/17-58-38.m4a'
+parent_folder='2022-04-05'
+uid='20220405-175838'
+
+==================================================
+==================================================
+==================================================
+
+recording #8 Processing 17-59-43.m4a from JustPressRecord
+
+filename='17-59-43.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-04-05/17-59-43.m4a'
+parent_folder='2022-04-05'
+uid='20220405-175943'
+
+==================================================
+==================================================
+==================================================
+
+recording #9 Processing 01-26-54.m4a from JustPressRecord
+
+filename='01-26-54.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-03-24/01-26-54.m4a'
+parent_folder='2022-03-24'
+uid='20220324-012654'
+
+==================================================
+==================================================
+==================================================
+
+recording #10 Processing 01-27-42.m4a from JustPressRecord
+
+filename='01-27-42.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-08-17/01-27-42.m4a'
+parent_folder='2022-08-17'
+uid='20220817-012742'
+
+==================================================
+==================================================
+==================================================
+
+recording #11 Processing 01-26-38.m4a from JustPressRecord
+
+filename='01-26-38.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-05-14/01-26-38.m4a'
+parent_folder='2022-05-14'
+uid='20220514-012638'
+
+==================================================
+==================================================
+==================================================
+
+recording #12 Processing 12-27-04.m4a from JustPressRecord
+
+filename='12-27-04.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-27-04.m4a'
+parent_folder='2022-09-17'
+uid='20220917-122704'
+
+==================================================
+==================================================
+==================================================
+
+recording #13 Processing 12-44-10.m4a from JustPressRecord
+
+filename='12-44-10.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-44-10.m4a'
+parent_folder='2022-09-17'
+uid='20220917-124410'
+
+==================================================
+==================================================
+==================================================
+
+recording #14 Processing 12-36-46.m4a from JustPressRecord
+
+filename='12-36-46.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-36-46.m4a'
+parent_folder='2022-09-17'
+uid='20220917-123646'
+
+==================================================
+==================================================
+==================================================
+
+recording #15 Processing 12-42-17.m4a from JustPressRecord
+
+filename='12-42-17.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-42-17.m4a'
+parent_folder='2022-09-17'
+uid='20220917-124217'
+
+==================================================
+==================================================
+==================================================
+
+recording #16 Processing 12-43-40.m4a from JustPressRecord
+
+filename='12-43-40.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-43-40.m4a'
+parent_folder='2022-09-17'
+uid='20220917-124340'
+
+==================================================
+==================================================
+==================================================
+
+recording #17 Processing 12-44-53.m4a from JustPressRecord
+
+filename='12-44-53.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-44-53.m4a'
+parent_folder='2022-09-17'
+uid='20220917-124453'
+
+==================================================
+==================================================
+==================================================
+
+recording #18 Processing 12-45-13.m4a from JustPressRecord
+
+filename='12-45-13.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-45-13.m4a'
+parent_folder='2022-09-17'
+uid='20220917-124513'
+
+==================================================
+==================================================
+==================================================
+
+recording #19 Processing 12-15-32.m4a from JustPressRecord
+
+filename='12-15-32.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-15-32.m4a'
+parent_folder='2022-09-17'
+uid='20220917-121532'
+
+==================================================
+==================================================
+==================================================
+
+recording #20 Processing 12-42-35.m4a from JustPressRecord
+
+filename='12-42-35.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-42-35.m4a'
+parent_folder='2022-09-17'
+uid='20220917-124235'
+
+==================================================
+==================================================
+==================================================
+
+recording #21 Processing 12-37-45.m4a from JustPressRecord
+
+filename='12-37-45.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-37-45.m4a'
+parent_folder='2022-09-17'
+uid='20220917-123745'
+
+==================================================
+==================================================
+==================================================
+
+recording #22 Processing 12-21-45.m4a from JustPressRecord
+
+filename='12-21-45.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-21-45.m4a'
+parent_folder='2022-09-17'
+uid='20220917-122145'
+
+==================================================
+==================================================
+==================================================
+
+recording #23 Processing 12-39-44.m4a from JustPressRecord
+
+filename='12-39-44.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-21/12-39-44.m4a'
+parent_folder='2022-09-21'
+uid='20220921-123944'
+
+==================================================
+==================================================
+==================================================
+
+recording #24 Processing 10-46-07.m4a from JustPressRecord
+
+filename='10-46-07.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2020-01-01/10-46-07.m4a'
+parent_folder='2020-01-01'
+uid='20200101-104607'
+
+
+-------------------------------
+main.py
+
+count_recordings=24
+count_processed=4
+
+-------------------------------
+main.py finished in 47.9s.
+
+nic@NicolasacStudio recordee % 

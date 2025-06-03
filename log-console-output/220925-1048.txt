@@ -1,0 +1,487 @@
+source /Users/nic/Python/recordee/venv/bin/activate
+nic@NicolasacStudio recordee % source /Users/nic/Python/recordee/venv/bin/activate
+(venv) nic@NicolasacStudio recordee % /Users/nic/Python/recordee/venv/bin/python /Us
+ers/nic/Python/recordee/main.py
+----------
+10:47:16 starting main.py
+
+main.py boilerplate loaded -----------
+
+Already transcribed UIDs:
+[]
+
+
+==================================================
+==================================================
+==================================================
+
+recording #1 Processing 01-27-19.m4a from JustPressRecord
+
+filename='01-27-19.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-05-26/01-27-19.m4a'
+parent_folder='2022-05-26'
+uid='20220526-012719'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-05-26/01-27-19.m4a
+to /Users/nic/Python/recordee/files/20220526-012719.m4a
+
+/Users/nic/Python/recordee/venv/lib/python3.10/site-packages/whisper/transcribe.py:70: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+Detected language: english
+
+#75 transcript["text"] = _tuplegetter(0, 'Alias for field number 0')
+
+
+#142 Transcript to clean:
+' People get violent when who they are is contrasting with who they think they should be. What is'
+
+
+#146 Creating dict of replacements:
+
+#156 line_parts=['nick, note', 'Nic Note\n']
+#156 line_parts=['nicknote', 'Nic Note\n']
+#156 line_parts=['nick note', 'Nic Note\n']
+#156 line_parts=['nick, note', 'Nic Note\n']
+#156 line_parts=['You line', '\\n\n']
+#156 line_parts=['new line', '\\n\n']
+#156 line_parts=['you line', '\\n\n']
+#156 line_parts=['new line', '\\n\n']
+#156 line_parts=['Dash', '-\n']
+#156 line_parts=['dash', '-\n']
+#156 line_parts=['full stop', '.\n']
+#156 line_parts=['Full stop', '.\n']
+#156 line_parts=['four step', '.\n']
+#156 line_parts=['full step', '.\n']
+#156 line_parts=['Full-step', '.\n']
+#156 line_parts=['full-step', '.\n']
+#156 line_parts=['come up', ',\n']
+#156 line_parts=['Call in', ':\n']
+#156 line_parts=['commons', 'comments\n']
+#156 line_parts=[' c ', ' see \n']
+#156 line_parts=['We were', 'Reword\n']
+#156 line_parts=['Salves', 'Sales\n']
+#156 line_parts=['Node', 'Note\n']
+#156 line_parts=[' .', '.\n']
+#156 line_parts=[' ,', ',\n']
+#156 line_parts=[' ?', '?\n']
+#156 line_parts=['question mark', '?\n']
+#156 line_parts=['come out', ',\n']
+#156 line_parts=['opposed up', '.\n']
+
+#170 Processing list of replacements:
+
+#173 replacing 'nick, note' with 'Nic Note'
+#173 replacing 'nicknote' with 'Nic Note'
+#173 replacing 'nick note' with 'Nic Note'
+#173 replacing 'You line' with '\\n'
+#173 replacing 'new line' with '\\n'
+#173 replacing 'you line' with '\\n'
+#173 replacing 'Dash' with '-'
+#173 replacing 'dash' with '-'
+#173 replacing 'full stop' with '.'
+#173 replacing 'Full stop' with '.'
+#173 replacing 'four step' with '.'
+#173 replacing 'full step' with '.'
+#173 replacing 'Full-step' with '.'
+#173 replacing 'full-step' with '.'
+#173 replacing 'come up' with ','
+#173 replacing 'Call in' with ':'
+#173 replacing 'commons' with 'comments'
+#173 replacing ' c ' with ' see '
+#173 replacing 'We were' with 'Reword'
+#173 replacing 'Salves' with 'Sales'
+#173 replacing 'Node' with 'Note'
+#173 replacing ' .' with '.'
+#173 replacing ' ,' with ','
+#173 replacing ' ?' with '?'
+#173 replacing 'question mark' with '?'
+#173 replacing 'come out' with ','
+#173 replacing 'opposed up' with '.'
+
+#180 Processing by lines:
+
+
+---
+Processing ' people get violent when who they are is contrasting with who they think they should be what is'
+people get violent when who they are is contrasting with who they think they should be what is
+string_output='People get violent when who they are is contrasting with who they think they should be what is'
+
+Transcript cleaned:
+People get violent when who they are is contrasting with who they think they should be what is
+
+Adding 20220526-012719 to log.
+
+==================================================
+==================================================
+==================================================
+
+recording #2 iCloud file: .13-25-33.m4a.icloud from JustPressRecord / SKIPPING
+
+parent_folder='2022-01-29'
+uid='20220129-132533.m4a.icloud'
+Adding 20220129-132533.m4a.icloud as iCloud to log.
+
+==================================================
+==================================================
+==================================================
+
+recording #3 Processing 00-37-19.m4a from JustPressRecord
+
+filename='00-37-19.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-05-17/00-37-19.m4a'
+parent_folder='2022-05-17'
+uid='20220517-003719'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-05-17/00-37-19.m4a
+to /Users/nic/Python/recordee/files/20220517-003719.m4a
+
+
+==================================================
+==================================================
+==================================================
+
+recording #4 Processing 01-29-25.m4a from JustPressRecord
+
+filename='01-29-25.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-24/01-29-25.m4a'
+parent_folder='2022-09-24'
+uid='20220924-012925'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-24/01-29-25.m4a
+to /Users/nic/Python/recordee/files/20220924-012925.m4a
+
+
+==================================================
+==================================================
+==================================================
+
+recording #5 Processing 20-44-23.m4a from JustPressRecord
+
+filename='20-44-23.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-06-14/20-44-23.m4a'
+parent_folder='2022-06-14'
+uid='20220614-204423'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-06-14/20-44-23.m4a
+to /Users/nic/Python/recordee/files/20220614-204423.m4a
+
+
+==================================================
+==================================================
+==================================================
+
+recording #6 Processing 17-54-32.m4a from JustPressRecord
+
+filename='17-54-32.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-04-05/17-54-32.m4a'
+parent_folder='2022-04-05'
+uid='20220405-175432'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-04-05/17-54-32.m4a
+to /Users/nic/Python/recordee/files/20220405-175432.m4a
+
+
+==================================================
+==================================================
+==================================================
+
+recording #7 Processing 17-58-38.m4a from JustPressRecord
+
+filename='17-58-38.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-04-05/17-58-38.m4a'
+parent_folder='2022-04-05'
+uid='20220405-175838'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-04-05/17-58-38.m4a
+to /Users/nic/Python/recordee/files/20220405-175838.m4a
+
+
+==================================================
+==================================================
+==================================================
+
+recording #8 Processing 17-59-43.m4a from JustPressRecord
+
+filename='17-59-43.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-04-05/17-59-43.m4a'
+parent_folder='2022-04-05'
+uid='20220405-175943'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-04-05/17-59-43.m4a
+to /Users/nic/Python/recordee/files/20220405-175943.m4a
+
+
+==================================================
+==================================================
+==================================================
+
+recording #9 Processing 01-26-54.m4a from JustPressRecord
+
+filename='01-26-54.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-03-24/01-26-54.m4a'
+parent_folder='2022-03-24'
+uid='20220324-012654'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-03-24/01-26-54.m4a
+to /Users/nic/Python/recordee/files/20220324-012654.m4a
+
+
+==================================================
+==================================================
+==================================================
+
+recording #10 Processing 01-27-42.m4a from JustPressRecord
+
+filename='01-27-42.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-08-17/01-27-42.m4a'
+parent_folder='2022-08-17'
+uid='20220817-012742'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-08-17/01-27-42.m4a
+to /Users/nic/Python/recordee/files/20220817-012742.m4a
+
+
+==================================================
+==================================================
+==================================================
+
+recording #11 Processing 01-26-38.m4a from JustPressRecord
+
+filename='01-26-38.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-05-14/01-26-38.m4a'
+parent_folder='2022-05-14'
+uid='20220514-012638'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-05-14/01-26-38.m4a
+to /Users/nic/Python/recordee/files/20220514-012638.m4a
+
+
+==================================================
+==================================================
+==================================================
+
+recording #12 Processing 12-27-04.m4a from JustPressRecord
+
+filename='12-27-04.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-27-04.m4a'
+parent_folder='2022-09-17'
+uid='20220917-122704'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-27-04.m4a
+to /Users/nic/Python/recordee/files/20220917-122704.m4a
+
+
+==================================================
+==================================================
+==================================================
+
+recording #13 Processing 12-44-10.m4a from JustPressRecord
+
+filename='12-44-10.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-44-10.m4a'
+parent_folder='2022-09-17'
+uid='20220917-124410'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-44-10.m4a
+to /Users/nic/Python/recordee/files/20220917-124410.m4a
+
+
+==================================================
+==================================================
+==================================================
+
+recording #14 Processing 12-36-46.m4a from JustPressRecord
+
+filename='12-36-46.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-36-46.m4a'
+parent_folder='2022-09-17'
+uid='20220917-123646'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-36-46.m4a
+to /Users/nic/Python/recordee/files/20220917-123646.m4a
+
+
+==================================================
+==================================================
+==================================================
+
+recording #15 Processing 12-42-17.m4a from JustPressRecord
+
+filename='12-42-17.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-42-17.m4a'
+parent_folder='2022-09-17'
+uid='20220917-124217'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-42-17.m4a
+to /Users/nic/Python/recordee/files/20220917-124217.m4a
+
+
+==================================================
+==================================================
+==================================================
+
+recording #16 Processing 12-43-40.m4a from JustPressRecord
+
+filename='12-43-40.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-43-40.m4a'
+parent_folder='2022-09-17'
+uid='20220917-124340'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-43-40.m4a
+to /Users/nic/Python/recordee/files/20220917-124340.m4a
+
+
+==================================================
+==================================================
+==================================================
+
+recording #17 Processing 12-44-53.m4a from JustPressRecord
+
+filename='12-44-53.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-44-53.m4a'
+parent_folder='2022-09-17'
+uid='20220917-124453'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-44-53.m4a
+to /Users/nic/Python/recordee/files/20220917-124453.m4a
+
+
+==================================================
+==================================================
+==================================================
+
+recording #18 Processing 12-45-13.m4a from JustPressRecord
+
+filename='12-45-13.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-45-13.m4a'
+parent_folder='2022-09-17'
+uid='20220917-124513'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-45-13.m4a
+to /Users/nic/Python/recordee/files/20220917-124513.m4a
+
+
+==================================================
+==================================================
+==================================================
+
+recording #19 Processing 12-15-32.m4a from JustPressRecord
+
+filename='12-15-32.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-15-32.m4a'
+parent_folder='2022-09-17'
+uid='20220917-121532'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-15-32.m4a
+to /Users/nic/Python/recordee/files/20220917-121532.m4a
+
+
+==================================================
+==================================================
+==================================================
+
+recording #20 Processing 12-42-35.m4a from JustPressRecord
+
+filename='12-42-35.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-42-35.m4a'
+parent_folder='2022-09-17'
+uid='20220917-124235'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-42-35.m4a
+to /Users/nic/Python/recordee/files/20220917-124235.m4a
+
+
+==================================================
+==================================================
+==================================================
+
+recording #21 Processing 12-37-45.m4a from JustPressRecord
+
+filename='12-37-45.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-37-45.m4a'
+parent_folder='2022-09-17'
+uid='20220917-123745'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-37-45.m4a
+to /Users/nic/Python/recordee/files/20220917-123745.m4a
+
+
+==================================================
+==================================================
+==================================================
+
+recording #22 Processing 12-21-45.m4a from JustPressRecord
+
+filename='12-21-45.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-21-45.m4a'
+parent_folder='2022-09-17'
+uid='20220917-122145'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-17/12-21-45.m4a
+to /Users/nic/Python/recordee/files/20220917-122145.m4a
+
+
+==================================================
+==================================================
+==================================================
+
+recording #23 Processing 12-39-44.m4a from JustPressRecord
+
+filename='12-39-44.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-21/12-39-44.m4a'
+parent_folder='2022-09-21'
+uid='20220921-123944'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-21/12-39-44.m4a
+to /Users/nic/Python/recordee/files/20220921-123944.m4a
+
+
+==================================================
+==================================================
+==================================================
+
+recording #24 Processing 10-46-07.m4a from JustPressRecord
+
+filename='10-46-07.m4a'
+full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2020-01-01/10-46-07.m4a'
+parent_folder='2020-01-01'
+uid='20200101-104607'
+
+COPYING FILE:
+from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2020-01-01/10-46-07.m4a
+to /Users/nic/Python/recordee/files/20200101-104607.m4a
+
+
+
+-------------------------------
+main.py
+
+count_recordings=24
+count_processed=1
+
+-------------------------------
+main.py finished in 9.5s.
+
+(venv) nic@NicolasacStudio recordee % 
