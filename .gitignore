@@ -166,3 +166,4 @@ dmypy.json
 .pyre/
 /videos
 
+Miniforge3-MacOSX-arm64.sh
