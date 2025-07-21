@@ -205,26 +205,40 @@ def clean_audio(input_path):
 
 if __name__ == "__main__":
 
-    # clean_audio("/Users/nic/aud/250605_0945_Voices_TEST.mp3")
+    # clean_audio("/Users/nic/aud/250630-0803-06-intranet-reloaded_TEST.wav")
 
     # Process all files from Voices in /Users/nic/aud/
     input_dir = "/Users/nic/aud"
+    files_to_process = []
+
+    # Collect all files that need processing
     for filename in os.listdir(input_dir):
-        if "_Voices" in filename and filename.endswith(".mp3") and not filename.endswith("_clean.mp3"):
+        if "-intranet-reloaded" in filename and (filename.endswith(".mp3") or filename.endswith(".wav")) and not filename.endswith("_clean.mp3"):
             input_path = os.path.join(input_dir, filename)
-            clean_path = os.path.join(input_dir, filename.replace(".mp3", "_clean.mp3"))
+            # Always create _clean.mp3 output path regardless of input extension
+            clean_path = os.path.join(input_dir, os.path.splitext(filename)[0] + "_clean.mp3")
             
-            # Skip if clean version already exists
             if not os.path.exists(clean_path):
-                print(f"\n{datetime.now().strftime('%H:%M:%S')} processing: {filename}")
-                result = clean_audio(input_path)
-                
-                if result:
-                    print(f"Audio cleaning completed! Output: {result}")
-                else:
-                    print(f"Audio cleaning failed for {filename}")
-            else:
-                print(f"\nSkipping {filename} - clean version already exists")
+                files_to_process.append(input_path)
+    
+    # Sort files alphabetically
+    files_to_process.sort()
+
+    total_files = len(files_to_process)
+
+    # Print summary
+    print(f"\n\nℹ️  Found {total_files} files to process\n")
+
+    # Process collected files
+    for i, input_path in enumerate(files_to_process, 1):
+        filename = os.path.basename(input_path)
+        print(f"\n\n{datetime.now().strftime('%H:%M:%S')} processing {i}/{total_files}: {filename}\n")
+        
+        result = clean_audio(input_path)
+        if result:
+            print(f"✅ Audio cleaning completed: {result}")
+        else:
+            print(f"❌ Audio cleaning failed for {filename}")
 
 
     run_time = round((time.time() - start_time), 3)

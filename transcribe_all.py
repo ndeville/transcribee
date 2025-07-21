@@ -158,6 +158,7 @@ start_time = time.time()
 directories = [
     "/Users/nic/aud",
     "/Users/nic/vid",
+    "/Users/nic/Dropbox/Kaltura/events/intranet_reloaded",
     # "/Users/nic/Dropbox/Kaltura/videos",
 ]
 
