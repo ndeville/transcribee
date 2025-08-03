@@ -5,8 +5,8 @@ from generate_translation import generate_translated_srt
 transcribe_file = input(f"\n> Enter the path to the file: ")
 
 
-# generate_en_srt(transcribe_file, language="de")
-generate_en_srt(transcribe_file)
+generate_en_srt(transcribe_file, language="de")
+# generate_en_srt(transcribe_file)
 
 # srt_path = transcribe_file.replace('.mp4', '.srt')
 
