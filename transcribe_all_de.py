@@ -5,7 +5,7 @@ from datetime import datetime
 print(f"\n---------- {datetime.now().strftime('%H:%M:%S')} starting {os.path.basename(__file__)}")
 
 import cv2
-import subprocess 
+import subprocess
 import traceback
 from mutagen import File as MutagenFile
 
@@ -14,19 +14,11 @@ import json
 from tqdm import tqdm
 
 from generate_captions import generate_en_srt
-from openaee_responses_api import generate_response # Generate responses from OpenAI API
-
-print(f"\n\nStarting {__file__}...\n")
-
-
-"""CONFIG"""
-
-# model = "o3"
-model = "gpt-5"
 
 verbose = False
 copy_failed_urls = False
 
+print(f"\n\nStarting {__file__}...\n")
 
 # FUNCTIONS
 
@@ -92,12 +84,13 @@ def get_media_files(directories, extensions=('.mp4', '.wav', '.mov', '.mp3', '.M
                     # Skip files that start with a dot
                     if file.startswith('.'):
                         continue
-                    if file.endswith(ext):
+                    # if file.endswith(f"_clean{ext}"):
+                    if file.endswith(f"{ext}"):
                         media_file = os.path.join(root, file)
                         base_path = os.path.splitext(media_file)[0]
-                        srt_file = base_path + '.srt'
-                        txt_file = base_path + '.txt'
-                        if not os.path.exists(srt_file) and not os.path.exists(txt_file):
+                        # srt_file = base_path + '.srt'
+                        txt_file = base_path + '_de.txt'
+                        if not os.path.exists(txt_file):
                             if has_audio_stream(media_file):
                                 media_files.append(media_file)
     
@@ -119,7 +112,7 @@ def process_media_files(media_files, verbose=False):
             # Convert to absolute path if it isn't already
             media_file = os.path.abspath(media_file)
             
-            srt_path = generate_en_srt(media_file, language=None)
+            generate_en_srt(media_file, language="de")
 
             # Check if the file is an audio file (.mp3 or .wav) and delete the JSON and SRT files
             if media_file.lower().endswith(('.mp3', '.wav')):
@@ -136,76 +129,6 @@ def process_media_files(media_files, verbose=False):
                 if os.path.exists(srt_file):
                     os.remove(srt_file)
                     print(f"ℹ️  Deleted SRT file: {srt_file}")
-
-            # TODO NicAI post-meeting transcription
-
-            if "-KA" in media_file:
-
-                print(f"\n📝  Processing {media_file} with NicAI for post-meeting transcription")
-
-                with open("/Users/nic/Dropbox/Notes/ai/prompts/_MeetingFullRecap.md", 'r', encoding='utf-8') as file:
-                    system_prompt = file.read()
-
-                # Get the .txt version of the srt_path
-                txt_path = srt_path.replace('.srt', '.txt')
-
-                with open(txt_path, 'r', encoding='utf-8') as file:
-                    transcript_txt = file.read()
-                    user_prompt = f"Meeting raw transcript:\n\n{transcript_txt}"
-
-                answer = generate_response(system_prompt, user_prompt, model=model, filters=None, stream=True)
-
-                # Copy the answer to the clipboard
-                process = subprocess.Popen("pbcopy", universal_newlines=True, stdin=subprocess.PIPE)
-                process.communicate(answer)
-
-                print(f"\n📝  Copied answer to clipboard: {answer}")
-
-                # Add to Account note
-
-                # Extract keyword from file path (first word following "-KA")
-                keyword = None
-
-                ka_index = media_file.find("-KA")
-                if ka_index != -1:
-                    # Find the part after "-KA"
-                    after_ka = media_file[ka_index + 3:]  # +3 to skip "-KA"
-                    # Split by common separators and get the first non-empty part
-                    parts = after_ka.replace('_', ' ').replace('-', ' ').replace('.', ' ').split()
-                    if parts:
-                        keyword = parts[0]
-                        print(f"📝  Extracted keyword: {keyword}")
-                
-                if keyword:
-                    account_note_path = f"/Users/nic/Dropbox/Notes/kaltura/clients/{keyword}.md"
-                    # Check if account note exists, if not try in partners folder
-                    if not os.path.exists(account_note_path):
-                        account_note_path = f"/Users/nic/Dropbox/Notes/kaltura/partners/{keyword}.md"
-                    if os.path.exists(account_note_path):
-                        print(f"📝  Adding to Account note: {keyword}")
-                        # Extract date from filename (first 6 characters as YYMMDD)
-                        filename = os.path.splitext(os.path.basename(media_file))[0]
-                        date_str = filename[:6] if len(filename) >= 6 else "YYMMDD"
-                        # Convert YYMMDD to YYYY-MM-DD format
-                        try:
-                            # Parse the 6-character date string (YYMMDD)
-                            year = int("20" + date_str[:2])  # Assume 20xx for YY
-                            month = int(date_str[2:4])
-                            day = int(date_str[4:6])
-                            date_str = f"{year:04d}-{month:02d}-{day:02d}"
-                        except (ValueError, IndexError):
-                            # If parsing fails, keep original date_str
-                            pass
-                        # Extract the rest of the filename after the keyword
-                        rest_of_filename = ""
-                        if len(parts) > 1:
-                            rest_of_filename = " ".join(parts[1:-1])
-                        
-                        output_to_append = f"\n\n### {date_str} Call with {rest_of_filename}\n\n{answer}"
-                        with open(account_note_path, 'a') as file:
-                            file.write(output_to_append)
-                    else:
-                        print(f"❌ Account note not found: {keyword}")
             
             # Calculate and display processing time
             run_time = round(time.time() - start_time, 3)
@@ -234,10 +157,10 @@ start_time = time.time()
 
 # Define your directories here
 directories = [
-    "/Users/nic/aud",
-    "/Users/nic/vid",
-    # "/Users/nic/aud/251007-abb",
+    # "/Users/nic/aud",
+    # "/Users/nic/vid",
     # "/Users/nic/tmp",
+    "/Users/nic/aud/2509-digitalx",
     # "/Users/nic/Dropbox/Kaltura/events/intranet_reloaded",
     # "/Users/nic/Dropbox/Kaltura/videos",
 ]
@@ -246,7 +169,7 @@ directories = [
 media_files = get_media_files(directories)
 
 if not media_files:
-    print("\n ℹ️  No new media files to process.\n")
+    print("\n ℹ️  No new media files to process. ONLY checked for _clean files - see line 87.\n")
 else:
     print(f"Found {len(media_files)} files to process:")
     for count_file, file in enumerate(media_files):

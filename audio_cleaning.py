@@ -208,12 +208,13 @@ if __name__ == "__main__":
     # clean_audio("/Users/nic/aud/250630-0803-06-intranet-reloaded_TEST.wav")
 
     # Process all files from Voices in /Users/nic/aud/
-    input_dir = "/Users/nic/aud"
+    # input_dir = "/Users/nic/aud"
+    input_dir = "/Users/nic/aud/251007-abb"
     files_to_process = []
 
     # Collect all files that need processing
     for filename in os.listdir(input_dir):
-        if "-intranet-reloaded" in filename and (filename.endswith(".mp3") or filename.endswith(".wav")) and not filename.endswith("_clean.mp3"):
+        if (filename.endswith(".mp3") or filename.endswith(".wav")) and not filename.endswith("_clean.mp3"):
             input_path = os.path.join(input_dir, filename)
             # Always create _clean.mp3 output path regardless of input extension
             clean_path = os.path.join(input_dir, os.path.splitext(filename)[0] + "_clean.mp3")
