@@ -88,10 +88,10 @@ def get_media_files(directories, extensions=('.mp4', '.wav', '.mov', '.mp3')):
             for root, _, files in os.walk(directory):
                 for file in tqdm(files, desc=f"Scanning {ext} files in {root}"):
                     # Skip files that start with a dot
-                    if file.startswith('.'):
-                        continue
-                    if "_Voices" not in file:
-                        continue
+                    # if file.startswith('.'):
+                    #     continue
+                    # if "_Voices" not in file:
+                    #     continue
                     if file.endswith(ext):
                         media_file = os.path.join(root, file)
                         base_path = os.path.splitext(media_file)[0]
@@ -164,7 +164,8 @@ start_time = time.time()
 
 # Define your directories here
 directories = [
-    "/Users/nic/aud",
+    # "/Users/nic/aud",
+    "/Users/nic/aud/251021-bonn/clean",
     # "/Users/nic/vid",
     # "/Users/nic/Dropbox/Kaltura/videos",
 ]

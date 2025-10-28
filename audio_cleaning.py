@@ -209,7 +209,7 @@ if __name__ == "__main__":
 
     # Process all files from Voices in /Users/nic/aud/
     # input_dir = "/Users/nic/aud"
-    input_dir = "/Users/nic/aud/251007-abb"
+    input_dir = "/Users/nic/aud/251021-bonn"
     files_to_process = []
 
     # Collect all files that need processing

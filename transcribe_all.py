@@ -161,7 +161,23 @@ def process_media_files(media_files, verbose=False):
 
                 print(f"\n📝  Copied answer to clipboard: {answer}")
 
-                # Add to Account note
+                # Add to Note
+
+                notes_folders = [
+                    "/Users/nic/Dropbox/Notes/kaltura/clients",
+                    "/Users/nic/Dropbox/Notes/kaltura/partners",
+                    "/Users/nic/Dropbox/Notes/kaltura/people",
+                ]
+
+                # Create a dictionary of all .md files in the notes folders
+                notes_dict = {}
+                for folder in notes_folders:
+                    if os.path.exists(folder):
+                        for file in os.listdir(folder):
+                            if file.endswith('.md'):
+                                filename_without_ext = os.path.splitext(file)[0].lower()
+                                full_path = os.path.join(folder, file)
+                                notes_dict[filename_without_ext] = full_path
 
                 # Extract keyword from file path (first word following "-KA")
                 keyword = None
@@ -177,11 +193,9 @@ def process_media_files(media_files, verbose=False):
                         print(f"📝  Extracted keyword: {keyword}")
                 
                 if keyword:
-                    account_note_path = f"/Users/nic/Dropbox/Notes/kaltura/clients/{keyword}.md"
-                    # Check if account note exists, if not try in partners folder
-                    if not os.path.exists(account_note_path):
-                        account_note_path = f"/Users/nic/Dropbox/Notes/kaltura/partners/{keyword}.md"
-                    if os.path.exists(account_note_path):
+                    note_path = notes_dict[keyword]
+
+                    if os.path.exists(note_path):
                         print(f"📝  Adding to Account note: {keyword}")
                         # Extract date from filename (first 6 characters as YYMMDD)
                         filename = os.path.splitext(os.path.basename(media_file))[0]
@@ -202,7 +216,7 @@ def process_media_files(media_files, verbose=False):
                             rest_of_filename = " ".join(parts[1:-1])
                         
                         output_to_append = f"\n\n### {date_str} Call with {rest_of_filename}\n\n{answer}"
-                        with open(account_note_path, 'a') as file:
+                        with open(note_path, 'a') as file:
                             file.write(output_to_append)
                     else:
                         print(f"❌ Account note not found: {keyword}")
