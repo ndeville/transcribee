@@ -137,8 +137,6 @@ def process_media_files(media_files, verbose=False):
                     os.remove(srt_file)
                     print(f"ℹ️  Deleted SRT file: {srt_file}")
 
-            # TODO NicAI post-meeting transcription
-
             if "-KA" in media_file:
 
                 print(f"\n📝  Processing {media_file} with NicAI for post-meeting transcription")
@@ -190,10 +188,10 @@ def process_media_files(media_files, verbose=False):
                     parts = after_ka.replace('_', ' ').replace('-', ' ').replace('.', ' ').split()
                     if parts:
                         keyword = parts[0]
-                        print(f"📝  Extracted keyword: {keyword}")
+                        print(f"\n📝  Extracted keyword: {keyword}")
                 
                 if keyword:
-                    note_path = notes_dict[keyword]
+                    note_path = notes_dict[keyword.lower()]
 
                     if os.path.exists(note_path):
                         print(f"📝  Adding to Account note: {keyword}")
