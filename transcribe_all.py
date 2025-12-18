@@ -22,7 +22,7 @@ print(f"\n\nStarting {__file__}...\n")
 """CONFIG"""
 
 # model = "o3"
-model = "gpt-5"
+model = "gpt-5.2"
 
 verbose = False
 copy_failed_urls = False
@@ -219,6 +219,74 @@ def process_media_files(media_files, verbose=False):
                     else:
                         print(f"❌ Account note not found: {keyword}")
             
+
+            if "-VI" in media_file:  # process as video to be processed with Video Summary
+
+                print(f"\n📝  Processing {media_file} with NicAI for VIDeo Summary\n")
+
+                with open("/Users/nic/Dropbox/Notes/ai/prompts/VideoSummary.md", 'r', encoding='utf-8') as file:
+                    system_prompt = file.read()
+
+                # Get the .txt version of the srt_path
+                txt_path = srt_path.replace('.srt', '.txt')
+
+                with open(txt_path, 'r', encoding='utf-8') as file:
+                    transcript_txt = file.read()
+                    user_prompt = f"Video raw transcript:\n\n{transcript_txt}"
+
+                answer = generate_response(system_prompt, user_prompt, model=model, filters=None, stream=True)
+
+                # Copy the answer to the clipboard
+                process = subprocess.Popen("pbcopy", universal_newlines=True, stdin=subprocess.PIPE)
+                process.communicate(answer)
+
+                print(f"\n📝  Copied answer to clipboard: {answer}")
+
+                # Add to Note
+
+                notes_folders = [
+                    "/Users/nic/Dropbox/Notes/kaltura",
+                    "/Users/nic/Dropbox/Notes/kaltura/guide/platform",
+                ]
+
+                # Create a dictionary of all .md files in the notes folders
+                notes_dict = {}
+                for folder in notes_folders:
+                    if os.path.exists(folder):
+                        for file in os.listdir(folder):
+                            if file.endswith('.md'):
+                                filename_without_ext = os.path.splitext(file)[0].lower()
+                                full_path = os.path.join(folder, file)
+                                notes_dict[filename_without_ext] = full_path
+
+                # Extract keyword from file path (first word following "-KA")
+                keyword = None
+
+                ka_index = media_file.find("-VI")
+                if ka_index != -1:
+                    # Find the part after "-VI"
+                    after_ka = media_file[ka_index + 3:]  # +3 to skip "-VI"
+                    # Split by common separators and get the first non-empty part
+                    parts = after_ka.replace('_', ' ').replace('-', ' ').replace('.', ' ').split()
+                    if parts:
+                        keyword = parts[0]
+                        print(f"\n📝  Extracted keyword: {keyword}")
+                        rest_of_filename = " ".join(parts[1:-1])
+                
+                if keyword:
+                    note_path = notes_dict[keyword.lower()]
+
+                    if os.path.exists(note_path):
+                        print(f"📝  Adding to note: {keyword}")
+                        
+                        output_to_append = f"\n\n### {rest_of_filename}\n\n{answer}\n\n\n"
+                        with open(note_path, 'a') as file:
+                            file.write(output_to_append)
+                    else:
+                        print(f"❌ Note not found: {keyword}")
+
+
+
             # Calculate and display processing time
             run_time = round(time.time() - start_time, 3)
             run_time_minutes = int(run_time // 60)
@@ -260,7 +328,7 @@ media_files = get_media_files(directories)
 if not media_files:
     print("\n ℹ️  No new media files to process.\n")
 else:
-    print(f"Found {len(media_files)} files to process:")
+    print(f"\n\nℹ️  Found {len(media_files)} files to process:")
     for count_file, file in enumerate(media_files):
         print(f"{count_file+1} > {file}")
 
