@@ -246,6 +246,7 @@ def process_media_files(media_files, verbose=False):
 
                 notes_folders = [
                     "/Users/nic/Dropbox/Notes/kaltura",
+                    "/Users/nic/Dropbox/Notes/kaltura/guide/products",
                     "/Users/nic/Dropbox/Notes/kaltura/guide/platform",
                 ]
 
