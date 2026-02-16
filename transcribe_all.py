@@ -77,7 +77,7 @@ def get_media_duration(media_path):
         return 0
 
 
-def get_media_files(directories, extensions=('.mp4', '.wav', '.mov', '.mp3', '.MP3')):
+def get_media_files(directories, extensions=('.mp4', '.wav', '.mov', '.mp3', '.MP3', '.m4a')):
     """Get all media files from the given directories that don't have corresponding SRT files."""
     media_files = []
     
@@ -165,6 +165,7 @@ def process_media_files(media_files, verbose=False):
                     "/Users/nic/Dropbox/Notes/kaltura/clients",
                     "/Users/nic/Dropbox/Notes/kaltura/partners",
                     "/Users/nic/Dropbox/Notes/kaltura/people",
+                    "/Users/nic/Dropbox/Notes/kaltura/webinars",
                 ]
 
                 # Create a dictionary of all .md files in the notes folders
@@ -248,6 +249,7 @@ def process_media_files(media_files, verbose=False):
                     "/Users/nic/Dropbox/Notes/kaltura",
                     "/Users/nic/Dropbox/Notes/kaltura/guide/products",
                     "/Users/nic/Dropbox/Notes/kaltura/guide/platform",
+                    "/Users/nic/Dropbox/Notes/kaltura/sko",
                 ]
 
                 # Create a dictionary of all .md files in the notes folders
@@ -317,6 +319,8 @@ start_time = time.time()
 directories = [
     "/Users/nic/aud",
     "/Users/nic/vid",
+    # "/Users/nic/demo/cma-cgm",
+    "/Users/nic/ai/videos",
     # "/Users/nic/aud/251007-abb",
     # "/Users/nic/tmp",
     # "/Users/nic/Dropbox/Kaltura/events/intranet_reloaded",
