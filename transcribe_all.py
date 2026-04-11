@@ -14,7 +14,9 @@ import json
 from tqdm import tqdm
 
 from generate_captions import generate_en_srt
+
 from openaee_responses_api import generate_response # Generate responses from OpenAI API
+from claude_query import generate_response as generate_response_claude
 
 print(f"\n\nStarting {__file__}...\n")
 
@@ -22,7 +24,9 @@ print(f"\n\nStarting {__file__}...\n")
 """CONFIG"""
 
 # model = "o3"
-model = "gpt-5.2"
+# model = "gpt-5.2"
+# model = "gpt-5.4-pro"
+model = "claude-opus-4-6"
 
 verbose = False
 copy_failed_urls = False
@@ -151,7 +155,10 @@ def process_media_files(media_files, verbose=False):
                     transcript_txt = file.read()
                     user_prompt = f"Meeting raw transcript:\n\n{transcript_txt}"
 
-                answer = generate_response(system_prompt, user_prompt, model=model, filters=None, stream=True)
+                # OpenAI API
+                # answer = generate_response(system_prompt, user_prompt, model=model, filters=None, stream=True)
+                # Claude API
+                answer = generate_response_claude(system_prompt, user_prompt, model=model, stream=True)
 
                 # Copy the answer to the clipboard
                 process = subprocess.Popen("pbcopy", universal_newlines=True, stdin=subprocess.PIPE)
@@ -185,8 +192,10 @@ def process_media_files(media_files, verbose=False):
                 if ka_index != -1:
                     # Find the part after "-KA"
                     after_ka = media_file[ka_index + 3:]  # +3 to skip "-KA"
-                    # Split by common separators and get the first non-empty part
-                    parts = after_ka.replace('_', ' ').replace('-', ' ').replace('.', ' ').split()
+                    # Strip leading separator and remove file extension
+                    after_ka = os.path.splitext(after_ka.lstrip(' -_'))[0]
+                    # Split by space/underscore only (preserve dashes in names like CMA-CGM)
+                    parts = after_ka.replace('_', ' ').split()
                     if parts:
                         keyword = parts[0]
                         print(f"\n📝  Extracted keyword: {keyword}")
@@ -212,7 +221,7 @@ def process_media_files(media_files, verbose=False):
                         # Extract the rest of the filename after the keyword
                         rest_of_filename = ""
                         if len(parts) > 1:
-                            rest_of_filename = " ".join(parts[1:-1])
+                            rest_of_filename = " ".join(parts[1:])
                         
                         output_to_append = f"\n\n### {date_str} Call with {rest_of_filename}\n\n{answer}"
                         with open(note_path, 'a') as file:
@@ -235,7 +244,10 @@ def process_media_files(media_files, verbose=False):
                     transcript_txt = file.read()
                     user_prompt = f"Video raw transcript:\n\n{transcript_txt}"
 
-                answer = generate_response(system_prompt, user_prompt, model=model, filters=None, stream=True)
+                # OpenAI API
+                # answer = generate_response(system_prompt, user_prompt, model=model, filters=None, stream=True)
+                # Claude API
+                answer = generate_response_claude(system_prompt, user_prompt, model=model, filters=None, stream=True)
 
                 # Copy the answer to the clipboard
                 process = subprocess.Popen("pbcopy", universal_newlines=True, stdin=subprocess.PIPE)
@@ -269,12 +281,14 @@ def process_media_files(media_files, verbose=False):
                 if ka_index != -1:
                     # Find the part after "-VI"
                     after_ka = media_file[ka_index + 3:]  # +3 to skip "-VI"
-                    # Split by common separators and get the first non-empty part
-                    parts = after_ka.replace('_', ' ').replace('-', ' ').replace('.', ' ').split()
+                    # Strip leading separator and remove file extension
+                    after_ka = os.path.splitext(after_ka.lstrip(' -_'))[0]
+                    # Split by space/underscore only (preserve dashes in names)
+                    parts = after_ka.replace('_', ' ').split()
                     if parts:
                         keyword = parts[0]
                         print(f"\n📝  Extracted keyword: {keyword}")
-                        rest_of_filename = " ".join(parts[1:-1])
+                        rest_of_filename = " ".join(parts[1:])
                 
                 if keyword:
                     note_path = notes_dict[keyword.lower()]
@@ -321,6 +335,8 @@ directories = [
     "/Users/nic/vid",
     # "/Users/nic/demo/cma-cgm",
     "/Users/nic/ai/videos",
+    "/Users/nic/Dropbox/Kaltura/videos",
+    # "/Users/nic/vid/TP.ai Talks",
     # "/Users/nic/aud/251007-abb",
     # "/Users/nic/tmp",
     # "/Users/nic/Dropbox/Kaltura/events/intranet_reloaded",
