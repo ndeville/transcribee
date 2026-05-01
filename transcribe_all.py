@@ -96,7 +96,8 @@ def get_media_files(directories, extensions=('.mp4', '.wav', '.mov', '.mp3', '.M
 
         for ext in extensions:
             for root, _, files in os.walk(directory):
-                for file in tqdm(files, desc=f"Scanning {ext} files in {root}"):
+                # for file in tqdm(files, desc=f"Scanning {ext} files in {root}"):
+                for file in files:
                     # Skip files that start with a dot
                     if file.startswith('.'):
                         continue
