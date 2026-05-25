@@ -1,5 +1,5 @@
-source /Users/nic/Python/recordee/venv/bin/activate
-nic@NicolasacStudio recordee % /Users/nic/Python/recordee/venv/bin/python /Users/nic/Python/recorde
+source /Users/nic/py/recordee/venv/bin/activate
+nic@NicolasacStudio recordee % /Users/nic/py/recordee/venv/bin/python /Users/nic/py/recorde
 e/main.py
 ----------
 09:16:04 starting main.py
@@ -20,7 +20,7 @@ filename='01-27-19.m4a'
 full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-05-26/01-27-19.m4a'
 parent_folder='2022-05-26'
 uid='20220526-012719'
-/Users/nic/Python/recordee/venv/lib/python3.10/site-packages/whisper/transcribe.py:70: UserWarning: FP16 is not supported on CPU; using FP32 instead
+/Users/nic/py/recordee/venv/lib/python3.10/site-packages/whisper/transcribe.py:70: UserWarning: FP16 is not supported on CPU; using FP32 instead
   warnings.warn("FP16 is not supported on CPU; using FP32 instead")
 Detected language: english
 
@@ -119,7 +119,7 @@ filename='00-37-19.m4a'
 full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-05-17/00-37-19.m4a'
 parent_folder='2022-05-17'
 uid='20220517-003719'
-/Users/nic/Python/recordee/venv/lib/python3.10/site-packages/whisper/transcribe.py:70: UserWarning: FP16 is not supported on CPU; using FP32 instead
+/Users/nic/py/recordee/venv/lib/python3.10/site-packages/whisper/transcribe.py:70: UserWarning: FP16 is not supported on CPU; using FP32 instead
   warnings.warn("FP16 is not supported on CPU; using FP32 instead")
 Detected language: english
 
@@ -344,7 +344,7 @@ filename='01-29-25.m4a'
 full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-09-24/01-29-25.m4a'
 parent_folder='2022-09-24'
 uid='20220924-012925'
-/Users/nic/Python/recordee/venv/lib/python3.10/site-packages/whisper/transcribe.py:70: UserWarning: FP16 is not supported on CPU; using FP32 instead
+/Users/nic/py/recordee/venv/lib/python3.10/site-packages/whisper/transcribe.py:70: UserWarning: FP16 is not supported on CPU; using FP32 instead
   warnings.warn("FP16 is not supported on CPU; using FP32 instead")
 Detected language: english
 
@@ -489,7 +489,7 @@ filename='20-44-23.m4a'
 full_path='/Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-06-14/20-44-23.m4a'
 parent_folder='2022-06-14'
 uid='20220614-204423'
-/Users/nic/Python/recordee/venv/lib/python3.10/site-packages/whisper/transcribe.py:70: UserWarning: FP16 is not supported on CPU; using FP32 instead
+/Users/nic/py/recordee/venv/lib/python3.10/site-packages/whisper/transcribe.py:70: UserWarning: FP16 is not supported on CPU; using FP32 instead
   warnings.warn("FP16 is not supported on CPU; using FP32 instead")
 Detected language: german
 

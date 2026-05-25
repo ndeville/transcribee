@@ -1,7 +1,7 @@
-source /Users/nic/Python/recordee/venv/bin/activate
+source /Users/nic/py/recordee/venv/bin/activate
 nic@NicolasacStudio recordee % e
 zsh: command not found: e
-nic@NicolasacStudio recordee % /Users/nic/Python/recordee/venv/bin/python /Users/nic/Python/recordee/main.py
+nic@NicolasacStudio recordee % /Users/nic/py/recordee/venv/bin/python /Users/nic/py/recordee/main.py
 ----------
 07:54:03 starting main.py
 

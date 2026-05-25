@@ -1,15 +1,18 @@
 import os
 import time
+import logging
 from datetime import datetime
+
+logging.getLogger('speechbrain').setLevel(logging.WARNING)
+logging.getLogger('httpx').setLevel(logging.WARNING)
 
 print(f"\n---------- {datetime.now().strftime('%H:%M:%S')} starting {os.path.basename(__file__)}")
 
 import cv2
-import subprocess 
+import subprocess
 import traceback
 from mutagen import File as MutagenFile
 
-import subprocess
 import json
 from tqdm import tqdm
 
@@ -115,7 +118,8 @@ def get_media_files(directories, extensions=('.mp4', '.wav', '.mov', '.mp3', '.M
 
 def process_media_files(media_files, verbose=False):
     """Process media files and generate SRT files using generate_en_srt."""
-    
+    results = []
+
     for count_media, media_file in enumerate(media_files):
         duration = get_media_duration(media_file)
         minutes = int(duration // 60)
@@ -167,16 +171,13 @@ def process_media_files(media_files, verbose=False):
                     transcript_txt = file.read()
                     user_prompt = f"Meeting raw transcript:\n\n{transcript_txt}"
 
-                # OpenAI API
-                # answer = generate_response(system_prompt, user_prompt, model=model, filters=None, stream=True)
                 # Claude API
-                answer = generate_response_claude(system_prompt, user_prompt, model=model, api_key=ANTHROPIC_API_KEY_TRANSCRIBEE)
+                answer = generate_response_claude(system_prompt, user_prompt, model=model, api_key=ANTHROPIC_API_KEY_TRANSCRIBEE, quiet=True)
 
                 # Copy the answer to the clipboard
                 process = subprocess.Popen("pbcopy", universal_newlines=True, stdin=subprocess.PIPE)
                 process.communicate(answer)
-
-                print(f"\n📝  Copied answer to clipboard: {answer}")
+                print(f"  📋 Copied AI recap to clipboard")
 
                 # Add to Note
 
@@ -211,41 +212,37 @@ def process_media_files(media_files, verbose=False):
                     parts = after_ka.replace('_', ' ').split()
                     if parts:
                         keyword = parts[0]
-                        print(f"\n📝  Extracted keyword: {keyword}")
-                
-                if keyword:
-                    note_path = notes_dict[keyword.lower()]
 
-                    if os.path.exists(note_path):
-                        print(f"📝  Adding to Account note: {keyword}")
+                if keyword:
+                    note_path = notes_dict.get(keyword.lower())
+
+                    if note_path and os.path.exists(note_path):
                         # Extract date from filename (first 6 characters as YYMMDD)
                         filename = os.path.splitext(os.path.basename(media_file))[0]
                         date_str = filename[:6] if len(filename) >= 6 else "YYMMDD"
-                        # Convert YYMMDD to YYYY-MM-DD format
                         try:
-                            # Parse the 6-character date string (YYMMDD)
-                            year = int("20" + date_str[:2])  # Assume 20xx for YY
+                            year = int("20" + date_str[:2])
                             month = int(date_str[2:4])
                             day = int(date_str[4:6])
                             date_str = f"{year:04d}-{month:02d}-{day:02d}"
                         except (ValueError, IndexError):
-                            # If parsing fails, keep original date_str
                             pass
-                        # Extract the rest of the filename after the keyword
                         rest_of_filename = ""
                         if len(parts) > 1:
                             rest_of_filename = " ".join(parts[1:])
-                        
-                        output_to_append = f"\n\n### {date_str} Call with {rest_of_filename}\n\n{answer}"
-                        with open(note_path, 'a') as file:
+
+                        answer_with_date = answer.replace("**AI**", f"**AI** - {date_str} Call with {rest_of_filename}", 1)
+                        output_to_append = f"\n\n{answer_with_date}"
+                        with open(note_path, 'a', encoding='utf-8') as file:
                             file.write(output_to_append)
+                        print(f"  📝 Added to note: {keyword}")
                     else:
-                        print(f"❌ Account note not found: {keyword}")
+                        print(f"  ❌ Account note not found: {keyword}")
             
 
             if "-VI" in media_file:  # process as video to be processed with Video Summary
 
-                print(f"\n📝  Processing {media_file} with NicAI for VIDeo Summary\n")
+                print(f"\n📝  Processing {media_file} with NicAI for VIDeo Summary")
 
                 with open("/Users/nic/Dropbox/Notes/ai/prompts/VideoSummary.md", 'r', encoding='utf-8') as file:
                     system_prompt = file.read()
@@ -257,16 +254,13 @@ def process_media_files(media_files, verbose=False):
                     transcript_txt = file.read()
                     user_prompt = f"Video raw transcript:\n\n{transcript_txt}"
 
-                # OpenAI API
-                # answer = generate_response(system_prompt, user_prompt, model=model, filters=None, stream=True)
                 # Claude API
-                answer = generate_response_claude(system_prompt, user_prompt, api_key=ANTHROPIC_API_KEY_TRANSCRIBEE, model=model)
+                answer = generate_response_claude(system_prompt, user_prompt, api_key=ANTHROPIC_API_KEY_TRANSCRIBEE, model=model, quiet=True)
 
                 # Copy the answer to the clipboard
                 process = subprocess.Popen("pbcopy", universal_newlines=True, stdin=subprocess.PIPE)
                 process.communicate(answer)
-
-                print(f"\n📝  Copied answer to clipboard: {answer}")
+                print(f"  📋 Copied AI summary to clipboard")
 
                 # Add to Note
 
@@ -277,7 +271,6 @@ def process_media_files(media_files, verbose=False):
                     "/Users/nic/Dropbox/Notes/kaltura/sko",
                 ]
 
-                # Create a dictionary of all .md files in the notes folders
                 notes_dict = {}
                 for folder in notes_folders:
                     if os.path.exists(folder):
@@ -288,33 +281,28 @@ def process_media_files(media_files, verbose=False):
                                     full_path = os.path.join(root, file)
                                     notes_dict[filename_without_ext] = full_path
 
-                # Extract keyword from file path (first word following "-KA")
                 keyword = None
 
                 ka_index = media_file.find("-VI")
                 if ka_index != -1:
-                    # Find the part after "-VI"
-                    after_ka = media_file[ka_index + 3:]  # +3 to skip "-VI"
-                    # Strip leading separator and remove file extension
+                    after_ka = media_file[ka_index + 3:]
                     after_ka = os.path.splitext(after_ka.lstrip(' -_'))[0]
-                    # Split by space/underscore only (preserve dashes in names)
                     parts = after_ka.replace('_', ' ').split()
                     if parts:
                         keyword = parts[0]
-                        print(f"\n📝  Extracted keyword: {keyword}")
                         rest_of_filename = " ".join(parts[1:])
-                
-                if keyword:
-                    note_path = notes_dict[keyword.lower()]
 
-                    if os.path.exists(note_path):
-                        print(f"📝  Adding to note: {keyword}")
-                        
-                        output_to_append = f"\n\n### {rest_of_filename}\n\n{answer}\n\n\n"
-                        with open(note_path, 'a') as file:
+                if keyword:
+                    note_path = notes_dict.get(keyword.lower())
+
+                    if note_path and os.path.exists(note_path):
+                        answer_with_title = answer.replace("**AI**", f"**AI** - {rest_of_filename}", 1)
+                        output_to_append = f"\n\n{answer_with_title}\n\n\n"
+                        with open(note_path, 'a', encoding='utf-8') as file:
                             file.write(output_to_append)
+                        print(f"  📝 Added to note: {keyword}")
                     else:
-                        print(f"❌ Note not found: {keyword}")
+                        print(f"  ❌ Note not found: {keyword}")
 
 
 
@@ -322,19 +310,23 @@ def process_media_files(media_files, verbose=False):
             run_time = round(time.time() - start_time, 3)
             run_time_minutes = int(run_time // 60)
             run_time_seconds = int(run_time % 60)
-            print(f'\nℹ️   Completed in {run_time_minutes}m{run_time_seconds}s ({duration/run_time:.2f}x): {media_file} [{minutes}m{seconds}s]')
-                
+            txt_path = os.path.splitext(media_file)[0] + '.txt'
+            ai_type = "recap" if "-KA" in media_file else "summary" if "-VI" in media_file else None
+            results.append({"file": media_file, "txt": txt_path, "status": "ok", "time": f"{run_time_minutes}m{run_time_seconds}s", "ai": ai_type})
+            print(f'\n  ✅ Completed in {run_time_minutes}m{run_time_seconds}s ({duration/run_time:.2f}x): {os.path.basename(media_file)} [{minutes}m{seconds}s]')
+
         except Exception as e:
-            # print(f"❌ Error processing {media_file}: {str(e)}")
             traceback.print_exc()
 
             if copy_failed_urls:
                 process = subprocess.Popen("pbcopy", universal_newlines=True, stdin=subprocess.PIPE)
-                process.communicate(media_file)            
+                process.communicate(media_file)
 
-            # input(f"\n\n❌ ERROR with {media_file}\n\nCopied to clipboard: {media_file}\n\nPress Enter to continue...")
-            print(f"\n\n❌ ERROR with {media_file}\n\nCopied to clipboard: {media_file}\n\n")
+            results.append({"file": media_file, "status": "error", "error": str(e)})
+            print(f"\n  ❌ ERROR with {os.path.basename(media_file)}")
             continue
+
+    return results
 
 
 # MAIN
@@ -348,8 +340,7 @@ directories = [
     "/Users/nic/aud",
     "/Users/nic/vid",
     # "/Users/nic/demo/cma-cgm",
-    "/Users/nic/ai/videos",
-    "/Users/nic/Dropbox/Kaltura/videos",
+    # "/Users/nic/Dropbox/Kaltura/videos",
     # "/Users/nic/vid/TP.ai Talks",
     # "/Users/nic/aud/251007-abb",
     # "/Users/nic/tmp",
@@ -367,12 +358,28 @@ else:
     for count_file, file in enumerate(media_files):
         print(f"{count_file+1} > {file}")
 
-    # Process the files
-    process_media_files(media_files)
+    results = process_media_files(media_files)
 
-# End Chrono
-run_time = round((time.time() - start_time), 3)
-minutes = int(run_time // 60)
-seconds = int(run_time % 60)
-print(f'\nℹ️  {minutes}m{seconds}s to generate ALL SRT & TXT files\n')
+    # Session recap
+    run_time = round((time.time() - start_time), 3)
+    minutes = int(run_time // 60)
+    seconds = int(run_time % 60)
+
+    ok_count = sum(1 for r in results if r["status"] == "ok")
+    err_count = sum(1 for r in results if r["status"] == "error")
+
+    print(f"\n\n{'='*60}")
+    print(f"  Session Recap - {ok_count} completed, {err_count} failed ({minutes}m{seconds}s)")
+    print(f"{'='*60}\n")
+
+    for r in results:
+        basename = os.path.basename(r["file"])
+        if r["status"] == "ok":
+            ai_label = f" + AI {r['ai']}" if r.get("ai") else ""
+            print(f"  ✅ {basename} [{r['time']}]{ai_label}")
+            print(f"     {r['txt']}")
+        else:
+            print(f"  ❌ {basename}")
+            print(f"     {r['error']}")
+    print()
 

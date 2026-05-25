@@ -1,4 +1,4 @@
-source /Users/nic/Python/recordee/venv/bin/activate
+source /Users/nic/py/recordee/venv/bin/activate
 /nic/Python/recordee/main.py
 ----------
 11:29:09 starting main.py
@@ -22,9 +22,9 @@ uid='20220526-012719'
 
 COPYING FILE:
 from /Users/nic/Library/Mobile Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2022-05-26/01-27-19.m4a
-to /Users/nic/Python/recordee/files/20220526-012719.m4a
+to /Users/nic/py/recordee/files/20220526-012719.m4a
 
-/Users/nic/Python/recordee/venv/lib/python3.10/site-packages/whisper/transcribe.py:70: UserWarning: FP16 is not supported on CPU; using FP32 instead
+/Users/nic/py/recordee/venv/lib/python3.10/site-packages/whisper/transcribe.py:70: UserWarning: FP16 is not supported on CPU; using FP32 instead
   warnings.warn("FP16 is not supported on CPU; using FP32 instead")
 Detected language: english
 
