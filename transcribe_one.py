@@ -2,9 +2,9 @@ from generate_captions import generate_en_srt
 from generate_translation import generate_translated_srt
 
 
-transcribe_file = input(f"\n> Enter the path to the file: ")
+transcribe_file = input(f"\n> Enter the path to the file: ").strip().strip('"').strip("'")
 
-transcribe_language = input(f"\n> Enter the language of the file (eg. 'en' or 'de'): ")
+transcribe_language = input(f"\n> Enter the language of the file (eg. 'en' or 'de'): ").strip()
 
 
 generate_en_srt(transcribe_file, language=transcribe_language)
